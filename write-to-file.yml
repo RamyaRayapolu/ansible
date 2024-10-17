@@ -1,0 +1,7 @@
+- name: Ensure a line is present in a file
+  hosts: all
+  tasks:
+    - name: Add a line to /etc/hosts
+      ansible.builtin.lineinfile:
+        path: /home/ec2-user/folder2/file.txt  
+        line: "192.168.1.10 myapp.local"
