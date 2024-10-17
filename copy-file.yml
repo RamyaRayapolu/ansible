@@ -1,8 +1,8 @@
-- name: copy a file
+- name: Copy a file
   hosts: web
   become: yes
   tasks:
-    - name: copy file.txt
+    - name: Copy file.txt
       ansible.builtin.copy:
-        remote_src: /home/ec2-user/folder/file.txt
-        remote_dest: /home/ec2-user/folder2/
+        src: /home/ec2-user/folder/file.txt  # Local path on the control machine
+        dest: /home/ec2-user/folder2/file.txt  # Path on the target host
