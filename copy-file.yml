@@ -4,5 +4,5 @@
   tasks:
     - name: copy file.txt
       ansible.builtin.copy:
-        src: /home/ec2-user/folder/file.txt
-        dest: /home/ec2-user/folder2/
+        remote_src: /home/ec2-user/folder/file.txt
+        remote_dest: /home/ec2-user/folder2/
