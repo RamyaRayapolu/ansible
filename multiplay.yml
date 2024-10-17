@@ -5,3 +5,6 @@
     ansible.builtin.debug:
       msg: "this is from play1 task"
       
+  - name: play task1
+    ansible.builtin.debug:
+      msg: "this is from play2 task2"
