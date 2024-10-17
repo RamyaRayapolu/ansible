@@ -1,5 +1,6 @@
 - name: copy a file
   hosts: web
+  become: yes
   tasks:
     - name: copy file.txt
       ansible.builtin.copy:
