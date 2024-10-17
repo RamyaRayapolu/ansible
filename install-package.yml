@@ -5,4 +5,4 @@
     - name: Install curl
       ansible.builtin.package:
         name: curl
-        state: absent
+        state: present
