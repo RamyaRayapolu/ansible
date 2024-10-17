@@ -4,5 +4,5 @@
   tasks:
     - name: Copy file.txt
       ansible.builtin.copy:
-        src: /home/ec2-user/folder/file.txt  # Local path on the control machine
+        src: /home/ec2-user/ansible/folder/file.txt  # Local path on the control machine
         dest: /home/ec2-user/folder2/file.txt  # Path on the target host
