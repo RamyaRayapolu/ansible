@@ -1,0 +1,7 @@
+- name: Create a directory
+  hosts: all
+  tasks:
+    - name: Create /opt/myapp directory
+      ansible.builtin.file:
+        path: /opt/myapp
+        state: directory
