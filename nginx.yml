@@ -9,4 +9,5 @@
   - name: start nginx
     ansible.builtin.service:
       name: nginx
-      state: started
+      state: started #ensures specified service is actively running
+      enabled: yes #service starts automatically at boot time.
