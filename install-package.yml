@@ -1,0 +1,7 @@
+- name: install curl package
+  hosts: web
+  tasks:
+    - name: Install curl
+      ansible.builtin.package:
+        name: curl
+        state: present
