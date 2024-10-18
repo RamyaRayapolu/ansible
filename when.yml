@@ -1,6 +1,6 @@
 - name: Install httpd package only if the OS is CentOS or RHEL
   hosts: local
-  ansible.builtin.yum:
+  ansible.builtin.package:
     name: httpd
     state: present
   when: ansible_distribution in ["CentOS", "RedHat"]
