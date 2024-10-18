@@ -1,0 +1,28 @@
+- name: Variables to print
+  hosts: web
+  vars: #play level vars, all tasks in this play have access to this
+    NAME: "Joe" #Inheritance
+    COURSE: "Ansible"
+
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: "HI {{NAME}}, Welcome to {{COURSE}} course. "
+
+  tasks:
+  - name: print the info
+    vars: #task level variables
+      COURSE:"DevOps" #Overriding
+    ansible.builtin.debug:
+      msg: "HI {{NAME}}, Welcome to {{COURSE}} course. "
+    
+  tasks:
+  - name: print the info
+    vars:
+      NAME:"Joy"
+    ansible.builtin.debug:
+      msg: "HI {{NAME}}, Welcome to {{COURSE}} course. "
+      
+
+
+

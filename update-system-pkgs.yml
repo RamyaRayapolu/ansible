@@ -1,0 +1,8 @@
+- name: Update and upgrade packages on RHEL 8+
+  hosts: rhel
+  become: yes
+  tasks:
+    - name: Upgrade all packages to the latest version
+      ansible.builtin.dnf: #dnf for 8 and later
+        name: '*'
+        state: latest  # Upgrades all installed packages to their latest versions

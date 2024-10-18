@@ -1,0 +1,9 @@
+- name: Example of variable
+  hosts: web
+  vars:
+    var_name: nginx
+  tasks:
+    - name: Install a package
+      ansible.builtin.debug:
+      name: "{{var_name}}"
+      state: present
