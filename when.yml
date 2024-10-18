@@ -1,4 +1,5 @@
 - name: Install httpd package only if the OS is CentOS or RHEL
+  hosts: local
   ansible.builtin.yum:
     name: httpd
     state: present
