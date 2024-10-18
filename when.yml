@@ -1,5 +1,6 @@
 - name: Install httpd package only if the OS is CentOS or RHEL
   hosts: local
+  tasks:
   ansible.builtin.package:
     name: httpd
     state: present
